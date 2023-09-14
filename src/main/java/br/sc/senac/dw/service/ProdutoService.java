@@ -17,5 +17,10 @@ public class ProdutoService {
 	public List<Produto> listarTodos(){
 		return produtoRepository.findAll();
 	}
+	
+	public Produto consultarPorId(long id) {
+		
+		return produtoRepository.findById(id).get();
+	}
 
 }
