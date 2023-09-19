@@ -29,3 +29,4 @@ insert into produtos values(2, 'chinela', 2, 20, 1, now());
 
 
 select*from produtos;
+select*from fabricantes;
