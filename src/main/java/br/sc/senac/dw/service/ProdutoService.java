@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.data.jpa.domain.Specification;
+import org.springframework.stereotype.Service;
 
 import br.sc.senac.dw.model.Specification.ProdutoSpecifications;
 import br.sc.senac.dw.model.entidade.Produto;
@@ -12,6 +13,7 @@ import br.sc.senac.dw.model.repository.ProdutoRepository;
 import br.sc.senac.dw.model.seletor.ProdutoSeletor;
 import jakarta.transaction.Transactional;
 
+@Service
 public class ProdutoService {
 	
 	@Autowired
@@ -27,13 +29,13 @@ public class ProdutoService {
 		return produtoRepository.findById(id).get();
 	}
 	
-	public List<Produto> listarComSeletor(ProdutoSeletor seletor){
-		
-		Specification<Produto> specification = ProdutoSpecifications.comFiltros(seletor);
-		
-		return produtoRepository.findAll(specification);
-		
-	}
+//	public List<Produto> listarComSeletor(ProdutoSeletor seletor){
+//		
+//		Specification<Produto> specification = ProdutoSpecifications.comFiltros(seletor);
+//		
+//		return produtoRepository.findAll(specification);
+//		
+//	}
 	
 	public Produto inserir(Produto novoProduto)  {
 		

@@ -49,10 +49,10 @@ public class ProdutoController {
 		return produtoService.consultarPorId(id.longValue());
 	}
 	
-	@PostMapping("/filtro")
-	public List<Produto> listarComSeletor(@RequestBody ProdutoSeletor seletor){
-		return produtoService.listarComSeletor(seletor);
-	}
+//	@PostMapping("/filtro")
+//	public List<Produto> listarComSeletor(@RequestBody ProdutoSeletor seletor){
+//		return produtoService.listarComSeletor(seletor);
+//	}
 	
 	/**
 	 * Método POST: geralmente utilizado para inserir novos registros
